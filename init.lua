@@ -197,6 +197,7 @@ require('lazy').setup({
   { import = 'custom.plugins' },
 }, {})
 
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
@@ -243,6 +244,10 @@ vim.o.termguicolors = true
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
+-- addition of newlines
+vim.keymap.set('n', '<leader>o', 'o<esc>')
+vim.keymap.set('n', '<leader>O', 'O<esc>')
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
